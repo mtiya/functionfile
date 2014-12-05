@@ -7,3 +7,39 @@ printf("From here You can Sort your Items.");
 void sort();
 getch();
 }
+
+void sort()
+{
+int a[10],i,j,n,temp;
+printf("Enter total no. of Items :");
+scanf("%d",&n);
+printf("Enter Items :");
+for(i=1;i<=n;i++)
+{
+	scanf("%d",&a[i]);
+}
+printf("Items are :");
+for(i=1;i<=n;i++)
+{
+	printf(a[i]);
+}
+for(i=1;i<=n;i++)
+{
+      for(j=1;j<=n;j++)
+      {
+	if(a[j]>a[j+1])
+	{
+	temp=a[j+1];
+	a[j+1]=a[j];
+	a[j]=temp;
+	}
+      }
+}
+printf("Sorted Items are :");
+for(i=1;i<=n;i++)
+{
+	printf(a[i]);
+}
+return;
+}
+
